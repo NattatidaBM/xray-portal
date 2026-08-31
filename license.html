@@ -1,5 +1,4 @@
-<!doctype html>
-<html lang="th">
+<!doctype html><html lang="th">
  <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,10 +24,8 @@
 
     body {
       width: 100%;
-      min-height: 100vh;
+      min-height: calc(100 * min(var(--vh, 1vh), 1vh));
       margin: 0;
-      display: flex;
-      flex-direction: column;
       color: var(--ink);
       font-family: "Noto Sans Thai", "Work Sans", sans-serif;
       background-color: #f8fafc;
@@ -186,12 +183,10 @@
 
     .page-shell {
       width: 100%;
-      flex: 1;
-      display: flex;
-      flex-direction: column;
+      min-height: calc(100 * min(var(--vh, 1vh), 1vh));
       position: relative;
       overflow: hidden;
-      padding: 0 0 30px;
+      padding: 0 0 50px;
       background-color: #f8fafc;
     }
 
@@ -225,10 +220,6 @@
       width: 100%;
       max-width: 1080px;
       margin: 10px auto 0;
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
       position: relative;
       z-index: 3;
       padding: 0 20px;
@@ -394,7 +385,7 @@
     .download-button:active { transform: scale(0.97); }
 
     .footer-note {
-      margin: 25px 0 15px;
+      margin: 35px 20px 0;
       text-align: center;
       font-size: 0.9rem;
       color: var(--muted);
@@ -485,6 +476,8 @@
         </a>
        </article>
 
+
+
       </div>
      </section>
     </main>
@@ -501,5 +494,4 @@
       lucide.createIcons();
     });
  </script>
-</body>
-</html>
+</body></html>
